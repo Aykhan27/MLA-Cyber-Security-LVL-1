@@ -6,6 +6,6 @@ with open('pass.txt') as f:
     lines = f.readlines()
     for words in lines: 
         normal_words = words.strip()
-        hashed_words= hashlib.sha3_512(normal_words.encode()).hexdigest()
+        hashed_words = hashlib.sha3_512(normal_words.encode()).hexdigest()
         if hashed_words == given_hash:
             print(normal_words)
